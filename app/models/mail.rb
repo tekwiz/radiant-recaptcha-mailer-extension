@@ -14,7 +14,7 @@ class Mail
 
   def valid?
     unless defined?(@valid)
-      @valid = true
+      @valid = errors.empty?
       if recipients.blank? and !is_required_field?(config[:recipients_field])
         errors['form'] = 'Recipients are required.'
         @valid = false
