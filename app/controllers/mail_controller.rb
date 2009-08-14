@@ -1,5 +1,6 @@
 class MailController < ApplicationController
-
+  include Recaptcha::Verification
+  
   no_login_required
   skip_before_filter :verify_authenticity_token  
 
@@ -24,6 +25,9 @@ class MailController < ApplicationController
   
   # Hook here to do additional things, like check a CAPTCHA
   def process_mail(mail, config)
+    verify_recaptcha(:model => mail)
+  rescue
+    logger.warn "reCAPTCHA not available."
   end
 
   def config_and_page(page)
@@ -33,5 +37,4 @@ class MailController < ApplicationController
     string = page.render_part(:mailer)
     [(string.empty? ? {} : YAML::load(string).symbolize_keys), page]
   end
-
 end
