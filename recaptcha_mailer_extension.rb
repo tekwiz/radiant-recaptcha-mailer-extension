@@ -1,5 +1,5 @@
 class RecaptchaMailerExtension < Radiant::Extension
-  version "0.3"
+  version "1.0"
   description "Provides support for email forms and generic mailing functionality with Recaptcha validation provided by the recaptcha extension."
   url "http://github.com/tekwiz/radiant-recaptcha-mailer-extension"
 
