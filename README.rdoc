@@ -44,6 +44,8 @@ Simple example of a form:
    <r:mailer:textarea name="message" /> <br/>
    <input type="submit" value="Send" />
   </r:mailer:form>
+  
+If you wish to add recaptcha validation, just install the recaptcha extension from http://github.com/tekwiz/radiant-recaptcha-extension and add the tag to your form page.
 
 
 == User-provided Configuration
