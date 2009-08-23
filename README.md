@@ -78,20 +78,20 @@ Relative urls will almost certainly not work if the mailer fails validation. Sol
 History
 -------
 
-Added reCAPTCHA validation and change named to reCAPTHCA Mailer by: Travis "Tekwiz" Warlick - warlickt@operissystems.com
-  Version: 1.0
-  Contact: warlickt@operissystems.com
+    Added reCAPTCHA validation and change named to reCAPTHCA Mailer by: Travis "Tekwiz" Warlick - warlickt@operissystems.com
+      Version: 1.0
+      Contact: warlickt@operissystems.com
 
-Created by: M@ McCray - mattmccray.com
-  Version: 0.2.1
-  Contact: mmccray@elucidata.net
+    Created by: M@ McCray - mattmccray.com
+      Version: 0.2.1
+      Contact: mmccray@elucidata.net
 
-Ported to 'mental' by: Sean Cribbs - seancribbs.com
-  Version: 0.1
-  Contact: seancribbs@gmail.com
+    Ported to 'mental' by: Sean Cribbs - seancribbs.com
+      Version: 0.1
+      Contact: seancribbs@gmail.com
   
-Seriously restructured by: Nathaniel Talbott - terralien.com
-  Version: 0.2
-  Contact: nathaniel@terralien.com
-  Work sponsored by: Ignite Social Media, http://ignitesocialmedia.com/
+    Seriously restructured by: Nathaniel Talbott - terralien.com
+      Version: 0.2
+      Contact: nathaniel@terralien.com
+      Work sponsored by: Ignite Social Media, http://ignitesocialmedia.com/
   
