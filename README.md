@@ -3,6 +3,17 @@ Mailer Extension for Radiant with reCAPTCHA Validation
 
 The Mailer extension enables form mail on a page.
 
+**This extension is only compatible with Radiant 0.8.x**
+  
+Setup
+-----
+
+From your extensions directory (i.e. vendor/extensions)
+
+    git clone git://github.com/tekwiz/radiant-recaptcha-mailer-extension.git recaptcha_mailer
+
+If you would like reCAPTCHA functionality, you must install the [reCAPTCHA extension](http://github.com/tekwiz/radiant-recaptcha-extension).
+
 Usage
 -----
 
