@@ -25,9 +25,11 @@ class MailController < ApplicationController
   
   # Hook here to do additional things, like check a CAPTCHA
   def process_mail(mail, config)
-    verify_recaptcha(:model => mail)
-  rescue
-    logger.warn "reCAPTCHA not available."
+    if respond_to?(:verify_recaptcha)
+      verify_recaptcha(:model => mail)
+    else
+      logger.warn "reCAPTCHA not available."
+    end
   end
 
   def config_and_page(page)
