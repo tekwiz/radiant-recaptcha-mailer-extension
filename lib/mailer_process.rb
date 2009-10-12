@@ -13,6 +13,7 @@ module MailerProcess
 
       mail = Mail.new(part_page, config, request.parameters[:mailer])
       self.last_mail = part_page.last_mail = mail
+      process_mail(mail, config)
 
       if mail.send
         response.redirect(config[:redirect_to], "302 Found") and return if config[:redirect_to]
@@ -32,5 +33,13 @@ module MailerProcess
       end
       string = page.render_part(:mailer)
       [(string.empty? ? {} : YAML::load(string).symbolize_keys), page]
+    end
+
+    def process_mail( mail, config )
+      if respond_to?(:verify_recaptcha)
+        verify_recaptcha(:model => mail)
+      else
+        logger.warn "reCAPTCHA not available."
+      end
     end
 end
