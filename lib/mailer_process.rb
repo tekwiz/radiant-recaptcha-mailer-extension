@@ -13,7 +13,7 @@ module MailerProcess
 
       mail = Mail.new(part_page, config, request.parameters[:mailer])
       self.last_mail = part_page.last_mail = mail
-      process_mail(mail, config)
+      # process_mail(mail, config)
 
       if mail.send
         response.redirect(config[:redirect_to], "302 Found") and return if config[:redirect_to]
