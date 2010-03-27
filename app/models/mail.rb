@@ -2,7 +2,7 @@ class Mail
   attr_reader :page, :config, :data, :errors
   def initialize(page, config, data)
     @page, @config, @data = page, config.with_indifferent_access, data
-    @required = @data.delete(:required)
+    @required = @data.delete(:required).merge(@config[:required] || {})
     @errors = {}
   end
 
